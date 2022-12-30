@@ -1,0 +1,7 @@
+{
+    "App": true,
+    "Auth": true,
+    "Layout": true,
+    "Component": true,
+    "Theme": true
+}

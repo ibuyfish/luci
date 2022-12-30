@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark__mode {
+    @apply text-dark__text;
+    @apply font-medium;
+}
+.dashboard {
+    font-family: "Montserrat", sans-serif;
+}
+.home {
+    font-family: "Barlow", sans-serif;
+}
+th {
+    border: 1px solid #606266;
+}
+table {
+    border: 1px solid #606266;
+}
+td {
+    border: 1px solid #606266;
+}
