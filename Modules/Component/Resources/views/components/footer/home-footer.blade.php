@@ -1,91 +1,104 @@
-<div id="footer">
-    <div class="footer-content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 wrap colum-1">
-                    <div class="info">
-                        <div class="footer-logo">
-                            <a href="#">
-                                <img src="../../public/images/logo.png" alt="">
-                            </a>
-                        </div>
-                        <div class="footer-info">
-                            <ul>
-                                <li>
-                                    <p>
-                                        Hotline: 1900 8079<br />
-                                        8:30 - 19:00 tất cả các ngày trong tuần
-                                    </p>
-                                    <p>&nbsp;</p>
-                                </li>
-                                <li>
-                                    <strong>VP Phía Bắc:</strong>
-                                    <span>Tầng 17 tòa nhà Viwaseen, 48 Phố Tố Hữu, Trung Văn, Nam Từ Liêm, Hà
-                                        Nội.</span>
-                                </li>
-                                <li>
-                                    <strong>VP Phía Nam:</strong>
-                                    <span>186A Nam Kỳ Khởi Nghĩa, Phường Võ Thị Sáu, Quận 3, TP.HCM</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+<section style="background-image:url({{asset('assets/images/home/footer_bg.png')}})">
+    <div class="px-[133px] border-b-[1px] border-white/20 py-5">
+        <div class="flex items-center">
+            <div class="flex-1">
+                <a href="">
+                    <img class="aspect-video" src="{{asset('assets/images/home/footer_logo.png')}}" alt="">
+                </a>
+                <div class="flex gap-1 mt-3">
+                    <a href="">
+                        <img src="{{asset('assets/images/icon/facebook.png')}}" alt="">
+                    </a>
+                    <a href="">
+                        <img src="{{asset('assets/images/icon/youtube.png')}}" alt="">
+                    </a>
+                    <a href="">
+                        <img src="{{asset('assets/images/icon/linkedin.png')}}" alt="">
+                    </a>
                 </div>
-                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 wrap">
-                    <div class="footer-navigation">
-                        <div class="footer-header">
-                            <h3>GIỚI THIỆU WINNY</h3>
-                        </div>
-                        <ul>
-                            <li><a href="">Giới thiệu</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">Hệ thống cửa hàng</a></li>
-                            <li><a href="">Liên hệ với Winny</a></li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="flex-1">
+                <div class="flex gap-7">
+                    <h1 class="text-lg font-bold text-white">Hotline</h1>
+                    <p class="text-lg text-white">0888729119</p>
                 </div>
-                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 wrap">
-                    <div class="footer-navigation">
-                        <div class="footer-header">
-                            <h3>Hỗ trợ khách hàng</h3>
-                        </div>
-                        <ul>
-                            <li><a href="">Hỏi đáp</a></li>
-                            <li><a href="">Chính sách vận chuyển</a></li>
-                            <li><a href="">Hướng dẫn chọn kích cỡ</a></li>
-                            <li><a href="">Hướng dẫn thanh toán</a></li>
-                            <li><a href="">Hướng dẫn thanh toán</a></li>
-                            <li><a href="">Chính sách bảo mật</a></li>
-                        </ul>
-                    </div>
+                <div class="flex gap-7">
+                    <h1 class="text-lg font-bold text-white">Email</h1>
+                    <p class="text-lg text-white">Info@Luci.Vn</p>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 wrap">
-                    <div class="footer-navigation">
-                        <div class="footer-header">
-                            <h3>GIỚI THIỆU WINNY</h3>
-                        </div>
-                        <div class="connect">
-                            <ul>
-                                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
-                                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-header">
-                            <h3>Phương thức thanh toán</h3>
-                        </div>
-                        <div class="pay">
-                            <img src="../../public/images/pay.png" alt="">
-                        </div>
-                        <div class="verify">
-                            <a href="#">
-                                <img src="../../public/images/vertify.png" alt="">
-                            </a>
-                        </div>
-                    </div>
+                <div class="flex gap-7">
+                    <h1 class="text-lg font-bold text-white">MST</h1>
+                    <p class="text-lg text-white">839645234</p>
+                </div>
+            </div>
+            <div class="flex-1 pr-[40px]">
+                <h1 class="text-lg font-bold text-white">Trụ sở Hà Nội</h1>
+                <p class="text-lg text-white">Tầng 2, toà New Skyline, Đường Nguyễn Khuyễn, Phường Văn Quán, Quận Hà
+                    Đông, Tp. Hà Nội</p>
+            </div>
+            <div class="flex-1">
+                <h1 class="text-lg font-bold text-white">Trụ sở Hồ chí minh</h1>
+                <p class="text-lg text-white">P2, Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ chí minh</p>
+            </div>
+            <div class="flex-1">
+                <a href="">
+                    <img class="mx-auto aspect-video" src="{{asset('assets/images/home/certificate.png')}}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="px-[133px] border-b-[1px] border-white/20 py-5">
+        <div class="flex items-center">
+            <div class="flex-1">
+                <h1 class="text-lg font-bold text-white">Hotline</h1>
+                <div class="mt-3">
+                    <p class="py-1 text-lg text-white"><a href="">Về chúng tôi</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Tuyển Dụng</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Liên hệ</a></p>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h1 class="text-lg font-bold text-white">Giải pháp</h1>
+                <div class="mt-3">
+                    <p class="py-1 text-lg text-white"><a href="">Phần mềm quản lý đô thị thông minh</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Trung tâm điều hành thông minh</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Đèn đường thông minh</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Quản lý tài sản thông minh</a></p>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h1 class="text-lg font-bold text-white">Dịch vụ</h1>
+                <div class="mt-3">
+                    <p class="py-1 text-lg text-white"><a href="">Hệ sinh thái LuciCloud</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Tư vấn giải pháp</a></p>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h1 class="text-lg font-bold text-white">Sản phẩm</h1>
+                <div class="mt-3">
+                    <p class="py-1 text-lg text-white"><a href="">GateWay</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Bộ điều khiển NEMA</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Bộ điều khiển tụ điện</a></p>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h1 class="text-lg font-bold text-white">Blog</h1>
+                <div class="mt-3">
+                    <p class="py-1 text-lg text-white"><a href="">Tư Vấn Đô Thị Thông Minh</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Tư Vấn Trung Tâm Điều Hành Thông Minh</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Tin Tức</a></p>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h1 class="text-lg font-bold text-white">Chính sách</h1>
+                <div class="mt-3">
+                    <p class="py-1 text-lg text-white"><a href="">Chính sách bảo mật thông tin</a></p>
+                    <p class="py-1 text-lg text-white"><a href="">Hình thức thanh toán</a></p>
                 </div>
             </div>
         </div>
     </div>
-
-</div>
+    <div class="px-[133px]">
+        <p class="py-1 text-lg text-[12px] text-white text-center"><a href="">© 2022 LUCI. All Right Reserved.</a></p>
+    </div>
+</section>

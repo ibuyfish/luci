@@ -7,6 +7,9 @@ module.exports = {
         "./Modules/**/*.blade.php",
     ],
     theme: {
+        container: {
+            center: true,
+        },
         extend: {
             colors: {
                 primary: "#7367f0",
@@ -19,6 +22,7 @@ module.exports = {
                 active: "#28C76F",
                 //////////
                 home_primary: "#009B71",
+                home_text: "#555555",
             },
         },
     },

@@ -3,5 +3,7 @@
     "Auth": true,
     "Layout": true,
     "Component": true,
-    "Theme": true
+    "Theme": true,
+    "Contact": true,
+    "Solution": true
 }
