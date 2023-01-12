@@ -9,8 +9,11 @@
             </h1>
             <div class="group bg-red-200 h-full flex items-center justify-center relative">
                 <h1 class="text-lg text-home_text">Giải pháp</h1>
-                <div class="group-hover:block hidden absolute z-10 bottom-0 -mb-12 bg-white shadow-lg w-[300px]">
-                    <a href="{{route('home.solution.detail')}}" class="block p-3">Quan ly Do thi</a>
+                <div class="group-hover:block hidden absolute z-10 top-[90px] bg-white shadow-lg w-[300px]">
+                    @foreach($solutions as $solution)
+                    <a href="{{route('home.solution.detail',$solution->id)}}"
+                        class="block p-3 bg-white hover:bg-home_primary hover:text-white transition">{{translate($solution,'name')}}</a>
+                    @endforeach
                 </div>
             </div>
             <h1 class="text-lg text-home_text">Trang chu</h1>

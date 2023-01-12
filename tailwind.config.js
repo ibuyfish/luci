@@ -23,6 +23,7 @@ module.exports = {
                 //////////
                 home_primary: "#009B71",
                 home_text: "#555555",
+                home_light_blue: "#F6F9FB",
             },
         },
     },

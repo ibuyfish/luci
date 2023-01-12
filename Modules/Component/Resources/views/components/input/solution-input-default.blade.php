@@ -1,0 +1,1 @@
+<input type="text" name="{{$name}}" placeholder="Some Text" class="bg-home_primary placeholder:text-white">

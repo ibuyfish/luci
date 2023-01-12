@@ -10,6 +10,20 @@
             </a>
         </div>
         <h1 class="px-[10px] pt-8 pb-2 text-sm font-semibold uppercase text-g_divider">
+            App
+        </h1>
+        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="banner" title="Banner">
+            <x-component::button.sidebar-href href="{{ route('admin.banner.list') }}" title="List" url="banner/list" />
+            <x-component::button.sidebar-href href="{{ route('admin.banner.create') }}" title="Create"
+                url="banner/create" />
+        </x-component::collapse.sidebar-text>
+        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="solution" title="Solution">
+            <x-component::button.sidebar-href href="{{ route('admin.solution.list') }}" title="List"
+                url="solution/list" />
+            <x-component::button.sidebar-href href="{{ route('admin.solution.create') }}" title="Create"
+                url="solution/create" />
+        </x-component::collapse.sidebar-text>
+        <h1 class="px-[10px] pt-8 pb-2 text-sm font-semibold uppercase text-g_divider">
             Theme
         </h1>
         <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="theme_category" title="Category">
