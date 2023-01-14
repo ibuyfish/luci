@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 28, 2022 at 01:30 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Host: localhost
+-- Generation Time: Jan 14, 2023 at 11:44 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,53 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `eji_laravel9`
+-- Database: `luci`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banners`
+--
+
+CREATE TABLE `banners` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 1,
+  `thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `banners`
+--
+
+INSERT INTO `banners` (`id`, `status`, `thumbnail`, `created_at`, `updated_at`) VALUES
+(1, 1, '/upload/images/images/banner/laptop.png', '2023-01-09 20:32:41', '2023-01-09 20:44:13'),
+(2, 1, '/upload/images/images/banner/laptop.png', '2023-01-09 20:44:02', '2023-01-09 20:45:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banner_translations`
+--
+
+CREATE TABLE `banner_translations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `banner_id` int(11) NOT NULL,
+  `language` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `banner_translations`
+--
+
+INSERT INTO `banner_translations` (`id`, `banner_id`, `language`, `name`, `subname`, `description`) VALUES
+(1, 1, 'vi', 'Hi Luci', 'Giải pháp quản lý đô thị thông minh', '<ul>\r\n	<li><span style=\"color:#ffffff\">Tiết kiệm nguồn lực quản l&yacute;</span></li>\r\n	<li><span style=\"color:#ffffff\">Hệ thống v&ocirc; c&ugrave;ng minh bạch v&agrave; thuận tiện</span></li>\r\n	<li><span style=\"color:#ffffff\">Đảm bảo sự ch&iacute;nh x&aacute;c tuyệt đối của số liệu</span></li>\r\n	<li><span style=\"color:#ffffff\">Đẩy mạnh sự chuy&ecirc;n nghiệp v&agrave; tức th&igrave; của từng bộ phận</span></li>\r\n	<li><span style=\"color:#ffffff\">N&acirc;ng cao sự kết nối trực tuyến tức thời với cư d&acirc;n</span></li>\r\n</ul>'),
+(2, 2, 'vi', 'Banner2', 'Banner2', '<p>Banner2</p>');
 
 -- --------------------------------------------------------
 
@@ -47,6 +92,51 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (29, '2022_11_30_032828_create_theme_configs_table', 2),
 (30, '2022_12_02_163822_create_theme_category_translations_table', 2),
 (31, '2022_11_27_152649_create_users_table', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `solutions`
+--
+
+CREATE TABLE `solutions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 1,
+  `thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `solutions`
+--
+
+INSERT INTO `solutions` (`id`, `status`, `thumbnail`, `created_at`, `updated_at`) VALUES
+(1, 1, NULL, '2023-01-11 21:47:20', '2023-01-11 21:47:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `solution_translations`
+--
+
+CREATE TABLE `solution_translations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `solution_id` int(11) NOT NULL,
+  `language` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `feature` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `optimal` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `include` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `solution_translations`
+--
+
+INSERT INTO `solution_translations` (`id`, `solution_id`, `language`, `name`, `banner`, `feature`, `optimal`, `include`) VALUES
+(1, 1, 'vi', 'Giải pháp  quản lý đô thị thông minh', '{\"name\":\"Gi\\u1ea3i ph\\u00e1p  qu\\u1ea3n l\\u00fd \\u0111\\u00f4 th\\u1ecb th\\u00f4ng minh\",\"subname\":\"Hi Luci l\\u00e0 gi\\u1ea3i ph\\u00e1p \\u0111\\u01b0\\u1ee3c \\u01b0a chu\\u1ed9ng nh\\u1ea5t trong m\\u00f4 h\\u00ecnh tri\\u1ec3n khai \\u0110\\u00f4 th\\u1ecb th\\u00f4ng minh \\u0111\\u1ebfn t\\u1eeb Luci. Hi Luci xu\\u1ea5t hi\\u1ec7n mang \\u0111\\u1ebfn cho t\\u1ea5t c\\u1ea3 nh\\u1eefng \\u0111\\u01a1n v\\u1ecb qu\\u1ea3n l\\u00fd t\\u00f2a nh\\u00e0, b\\u1ea5t \\u0111\\u1ed9ng s\\u1ea3n hay c\\u0103n h\\u1ed9 s\\u1ef1 ti\\u1ec7n \\u00edch, \\u0111\\u01a1n gi\\u1ea3n v\\u00e0 ti\\u1ebft ki\\u1ec7m t\\u1ed1i \\u0111a ngu\\u1ed3n l\\u1ef1c.\",\"button\":\"\\u0110\\u1ecdc th\\u00eam v\\u1ec1 ch\\u00fang t\\u00f4i\",\"thumbnail\":null}', '{\"name\":\"N\\u1ec1n t\\u1ea3ng qu\\u1ea3n l\\u00fd t\\u00edch h\\u1ee3p nhi\\u1ec1u t\\u00ednh n\\u0103ng\",\"subname\":\"Hi Luci ra \\u0111\\u1eddi nh\\u1eb1m n\\u00e2ng cao ch\\u1ea5t l\\u01b0\\u1ee3ng c\\u0169ng nh\\u01b0 ti\\u1ec7n \\u00edch trong qu\\u00e1 tr\\u00ecnh qu\\u1ea3n l\\u00fd b\\u1ea5t \\u0111\\u1ed9ng s\\u1ea3n, t\\u00f2a nh\\u00e0, chung c\\u01b0 c\\u1ee7a ban qu\\u1ea3n l\\u00fd, ch\\u1ee7 \\u0111\\u1ea7u t\\u01b0.\",\"array\":{\"feature_item1\":{\"image\":\"\\/upload\\/images\\/images\\/banner\\/feature1.png\",\"name\":\"Qu\\u1ea3n l\\u00fd c\\u01b0 d\\u00e2n - kh\\u00e1ch h\\u00e0ng\",\"list\":[\"Qu\\u1ea3n l\\u00fd th\\u00f4ng tin chi ti\\u1ebft t\\u1eebng m\\u1eb7t b\\u1eb1ng\",\"Qu\\u1ea3n l\\u00fd tr\\u1ea1ng th\\u00e1i c\\u1ee7a m\\u1eb7t b\\u1eb1ng\",\"Qu\\u1ea3n l\\u00fd vi\\u1ec7c chuy\\u1ec3n quy\\u1ec1n s\\u1eed d\\u1ee5ng ho\\u1eb7c cho thu\\u00ea m\\u1eb7t b\\u1eb1ng trong to\\u00e0 nh\\u00e0\",\"Qu\\u1ea3n l\\u00fd t\\u00ecnh tr\\u1ea1ng, l\\u1ecbch s\\u1eed s\\u1eed d\\u1ee5ng m\\u1eb7t b\\u1eb1ng to\\u00e0 nh\\u00e0\"]},\"feature_item2\":{\"image\":\"\\/upload\\/images\\/images\\/banner\\/feat3.png\",\"name\":\"Qu\\u1ea3n l\\u00fd d\\u1ecbch v\\u1ee5\",\"list\":[\"L\\u00ean k\\u1ebf ho\\u1ea1ch b\\u1ea3o tr\\u00ec, s\\u1eeda ch\\u1eefa, \\u0111\\u1eb7t mua thi\\u1ebft b\\u1ecb\",\"Cung c\\u1ea5p d\\u1ecbch v\\u1ee5 qua h\\u00ecnh th\\u1ee9c tr\\u1ef1c tuy\\u1ebfn\",\"Qu\\u1ea3n l\\u00fd \\u0111\\u01a1n v\\u1ecb cung c\\u1ea5p d\\u1ecbch v\\u1ee5\",\"Qu\\u1ea3n l\\u00fd chi ph\\u00ed d\\u1ecbch v\\u1ee5, t\\u00e0i ch\\u00ednh\",\"Qu\\u1ea3n l\\u00fd l\\u1ecbch l\\u00e0m vi\\u1ec7c, l\\u1ecbch b\\u1ea3o d\\u01b0\\u1ee1ng,...\"]},\"feature_item3\":{\"image\":\"\\/upload\\/images\\/images\\/banner\\/feat4.png\",\"name\":\"Qu\\u1ea3n l\\u00fd t\\u00e0i s\\u1ea3n v\\u00e0 thi\\u1ebft b\\u1ecb\",\"list\":[\"Qu\\u1ea3n l\\u00fd th\\u00f4ng tin t\\u00e0i s\\u1ea3n: th\\u00f4ng tin chung, Nh\\u00e0 cung c\\u1ea5p, \\u0111\\u1eb7c t\\u00ednh k\\u1ef9 thu\\u1eadt,\\u2026.\",\"Qu\\u1ea3n l\\u00fd ki\\u1ec3m k\\u00ea t\\u00ecnh tr\\u1ea1ng t\\u00e0i s\\u1ea3n\",\"\\u0110\\u1ea3m b\\u1ea3o tr\\u00e1nh m\\u1ea5t c\\u1eafp, h\\u01b0 h\\u1ecfng t\\u00e0i s\\u1ea3n\"]},\"feature_item4\":{\"image\":\"\\/upload\\/images\\/images\\/banner\\/feat2.png\",\"name\":\"Qu\\u1ea3n l\\u00fd m\\u1eb7t b\\u1eb1ng to\\u00e0 nh\\u00e0\",\"list\":[\"Qu\\u1ea3n l\\u00fd th\\u00f4ng tin t\\u00e0i s\\u1ea3n: th\\u00f4ng tin chung, Nh\\u00e0 cung c\\u1ea5p, \\u0111\\u1eb7c t\\u00ednh k\\u1ef9 thu\\u1eadt,\\u2026.\",\"Qu\\u1ea3n l\\u00fd ki\\u1ec3m k\\u00ea t\\u00ecnh tr\\u1ea1ng t\\u00e0i s\\u1ea3n\",\"\\u0110\\u1ea3m b\\u1ea3o tr\\u00e1nh m\\u1ea5t c\\u1eafp, h\\u01b0 h\\u1ecfng t\\u00e0i s\\u1ea3n\"]}}}', '{\"name\":\"Hi Luci \\u0111\\u01b0\\u1ee3c t\\u1ed1i \\u01b0u cho?\",\"array\":{\"optimal_item1\":{\"image\":\"\\/upload\\/images\\/images\\/demo\\/optimal1.png\",\"name\":\"\\u0110\\u01a0N V\\u1eca CH\\u1ee6 \\u0110\\u1ea6U T\\u01af B\\u1ea4T \\u0110\\u1ed8NG S\\u1ea2N\",\"list\":[\"Gia t\\u0103ng gi\\u00e1 tr\\u1ecb th\\u1ef1c c\\u1ee7a khu \\u0111\\u00f4 th\\u1ecb\",\"D\\u1ec5 d\\u00e0ng t\\u00edch h\\u1ee3p c\\u00e1c m\\u00f4 h\\u00ecnh d\\u1ecbch v\\u1ee5 \\u0111a d\\u1ea1ng\",\"T\\u1ed1i \\u01b0u ngu\\u1ed3n l\\u1ef1c, ti\\u1ebft ki\\u1ec7m th\\u1eddi gian v\\u1eadn h\\u00e0nh v\\u00e0 qu\\u1ea3n l\\u00fd\",\"Tr\\u1edf th\\u00e0nh \\u0111\\u01a1n v\\u1ecb t\\u1ea1o l\\u1eadp gi\\u00e1 tr\\u1ecb, \\u0111i \\u0111\\u1ea7u xu th\\u1ebf th\\u1ecb tr\\u01b0\\u1eddng\",\"S\\u1edf h\\u1eefu t\\u00e0i s\\u1ea3n k\\u1ef9 thu\\u1eadt s\\u1ed1 v\\u1ec1 th\\u00f4ng tin c\\u01b0 d\\u00e2n\",null],\"button\":\"Th\\u00f4ng tin chi ti\\u1ebft\"},\"optimal_item2\":{\"image\":\"\\/upload\\/images\\/images\\/demo\\/Rectangle%2077%20(1).png\",\"name\":\"\\u0110\\u01a0N V\\u1eca QU\\u1ea2N L\\u00dd TO\\u00c0 NH\\u00c0 - CHUNG C\\u01af\",\"list\":[\"T\\u1ed1i \\u01b0u ngu\\u1ed3n nh\\u00e2n l\\u1ef1c v\\u1eadn h\\u00e0nh\",\"T\\u1ed1i \\u01b0u chi ph\\u00ed b\\u1ea3o tr\\u00ec, s\\u1eeda ch\\u1eefa\",\"L\\u01b0u tr\\u1eef th\\u00f4ng tin c\\u01b0 d\\u00e2n ti\\u1ec7n l\\u1ee3i\",\"X\\u1eed l\\u00fd, gi\\u1ea3i quy\\u1ebft v\\u1ea5n \\u0111\\u1ec1 c\\u1ee7a c\\u01b0 d\\u00e2n hi\\u1ec7u qu\\u1ea3, nhanh ch\\u00f3ng\",\"Qu\\u1ea3n l\\u00fd d\\u1ecbch v\\u1ee5 ti\\u1ec7n \\u00edch kh\\u00e1c trong khu \\u0111\\u00f4 th\\u1ecb hi\\u1ec7u qu\\u1ea3\"],\"button\":\"Th\\u00f4ng tin chi ti\\u1ebft\"},\"optimal_item3\":{\"image\":\"\\/upload\\/images\\/images\\/demo\\/Rectangle%2083.png\",\"name\":\"C\\u01af D\\u00c2N TH\\u00d4NG MINH\",\"list\":[\"K\\u1ebft n\\u1ed1i v\\u00e0 trao \\u0111\\u1ed5i 2 chi\\u1ec1u gi\\u1eefa BQL v\\u00e0 c\\u00e1c c\\u01b0 d\\u00e2n nhanh ch\\u00f3ng\",\"T\\u1ea1o ra m\\u00f4i tr\\u01b0\\u1eddng s\\u1ed1ng ti\\u1ec7n nghi, hi\\u1ec7n \\u0111\\u1ea1i, tho\\u1ea3i m\\u00e1i\",\"Tr\\u1ea3i nghi\\u1ec7m c\\u00e1c d\\u1ecbch v\\u1ee5 tr\\u1ef1c tuy\\u1ebfn t\\u1ea1i ch\\u1ed7, li\\u1ec1n m\\u1ea1ch\",\"T\\u1ed1i \\u01b0u chi ti\\u00eau\"],\"button\":\"Th\\u00f4ng tin chi ti\\u1ebft\"}}}', '{\"name\":null,\"subname\":null,\"array\":{\"include_item1\":{\"image\":\"\\/upload\\/images\\/images\\/icon\\/Frame%2015541.png\",\"name\":\"Ph\\u1ea7n m\\u1ec1m c\\u01b0 d\\u00e2n\",\"subname\":\"T\\u1ea5t c\\u1ea3 c\\u01b0 d\\u00e2n s\\u1ed1ng trong khu \\u0111\\u00f4 th\\u1ecb \\u0111\\u1ec1u c\\u00f3 quy\\u1ec1n truy c\\u1eadp app c\\u01b0 d\\u00e2n - Hi Luci \\u0111\\u1ec3 \\u0111\\u0103ng k\\u00fd ti\\u1ec7n \\u00edch, \\u0111\\u0103ng k\\u00fd d\\u1ecbch v\\u1ee5, thanh to\\u00e1n online c\\u00e1c ph\\u00ed d\\u1ecbch v\\u1ee5, theo d\\u00f5i tra c\\u1ee9u l\\u1ecbch s\\u1eed thanh to\\u00e1n, ph\\u1ea3n \\u00e1nh ho\\u1eb7c trao \\u0111\\u1ed5i tr\\u1ef1c ti\\u1ebfp v\\u1edbi ban qu\\u1ea3n l\\u00fd.\"},\"include_item2\":{\"image\":\"\\/upload\\/images\\/images\\/icon\\/Frame%2015541%20(4).png\",\"name\":\"Ph\\u1ea7n m\\u1ec1m qu\\u1ea3n l\\u00fd\",\"subname\":\"Ch\\u1ec9 v\\u1edbi v\\u00e0i thao t\\u00e1c \\u0111\\u01a1n gi\\u1ea3n t\\u1ea3i \\u1ee9ng d\\u1ee5ng v\\u1ec1 \\u0111i\\u1ec7n tho\\u1ea1i th\\u00f4ng minh, m\\u1ed7i th\\u00e0nh vi\\u00ean trong ban qu\\u1ea3n l\\u00fd \\u0111\\u1ec1u c\\u00f3 th\\u1ec3 n\\u1eafm b\\u1eaft th\\u00f4ng tin, t\\u00ecnh h\\u00ecnh m\\u1edbi nh\\u1ea5t t\\u1ea1i to\\u00e0 nh\\u00e0.\"},\"include_item3\":{\"image\":\"\\/upload\\/images\\/images\\/icon\\/Frame%2015541%20(2).png\",\"name\":\"Website d\\u00e0nh cho \\u0111\\u01a1n v\\u1ecb qu\\u1ea3n l\\u00fd\",\"subname\":\"Ph\\u00e2n h\\u1ec7 web ban qu\\u1ea3n l\\u00fd t\\u1eadp chung d\\u00e0nh ri\\u00eang cho ban qu\\u1ea3n l\\u00fd gi\\u00fap n\\u1eafm b\\u1eaft \\u0111\\u01b0\\u1ee3c d\\u1ef1 \\u00e1n, nh\\u00e2n s\\u1ef1, c\\u01b0 d\\u00e2n v\\u00e0 ph\\u1ea3n \\u00e1nh c\\u1ee7a c\\u01b0 d\\u00e2n.\"},\"include_item4\":{\"image\":\"\\/upload\\/images\\/images\\/icon\\/Frame%2015541%20(3).png\",\"name\":\"Website qu\\u1ea3n l\\u00fd t\\u1eadp trung\",\"subname\":\"Ph\\u00e2n h\\u1ec7 \\u0111\\u01b0\\u1ee3c d\\u00e0nh ri\\u00eang cho ch\\u1ee7 \\u0111\\u1ea7u t\\u01b0 x\\u00e2y d\\u1ef1ng b\\u1ea5t \\u0111\\u1ed9ng s\\u1ea3n, ban qu\\u1ea3n l\\u00fd v\\u1edbi c\\u00e1c t\\u00ednh n\\u0103ng sau: Qu\\u1ea3n l\\u00fd c\\u01b0 d\\u00e2n, Qu\\u1ea3n l\\u00fd b\\u1ea5t \\u0111\\u1ed9ng s\\u1ea3n, Qu\\u1ea3n l\\u00fd ti\\u1ebfn \\u0111\\u1ed9 c\\u00f4ng vi\\u1ec7c, Qu\\u1ea3n l\\u00fd d\\u1ecbch v\\u1ee5 v\\u00e0 t\\u00e0i ch\\u00ednh.\"}}}');
 
 -- --------------------------------------------------------
 
@@ -839,10 +929,42 @@ INSERT INTO `user_infos` (`id`, `user_id`, `phone`, `address`) VALUES
 --
 
 --
+-- Indexes for table `banners`
+--
+ALTER TABLE `banners`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `banner_translations`
+--
+ALTER TABLE `banner_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `theme_category_id` (`banner_id`),
+  ADD KEY `category_id` (`banner_id`),
+  ADD KEY `theme_category_id_2` (`banner_id`),
+  ADD KEY `theme_blog_id` (`banner_id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `solutions`
+--
+ALTER TABLE `solutions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `solution_translations`
+--
+ALTER TABLE `solution_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `theme_category_id` (`solution_id`),
+  ADD KEY `category_id` (`solution_id`),
+  ADD KEY `theme_category_id_2` (`solution_id`),
+  ADD KEY `theme_blog_id` (`solution_id`);
 
 --
 -- Indexes for table `theme_blogs`
@@ -921,10 +1043,34 @@ ALTER TABLE `user_infos`
 --
 
 --
+-- AUTO_INCREMENT for table `banners`
+--
+ALTER TABLE `banners`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `banner_translations`
+--
+ALTER TABLE `banner_translations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `solutions`
+--
+ALTER TABLE `solutions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `solution_translations`
+--
+ALTER TABLE `solution_translations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `theme_blogs`
