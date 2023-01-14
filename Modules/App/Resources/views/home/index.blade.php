@@ -11,11 +11,15 @@
 
 @include('app::home.banner')
 <section class="py-8" style="background-image:url({{asset('assets/images/bg-decor1.png')}})">
-    <div class="grid grid-cols-9 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-9 items-center px-4 lg:px-0">
         <div class="lg:pl-[133px] col-span-4">
-            <h1 class="uppercase text-[60px] font-bold text-home_primary">Tầm nhìn - sứ mệnh</h1>
-            <h2 class="text-black font-bold text-[60px]">Inspire Life With Technology</h2>
-            <p class="text-black text-[24px]">Công ty Cổ phần Luci là Công ty công nghệ tiên phong nghiên cứu và phát
+            <h1 class="uppercase text-[32px] text-center lg:text-start lg:text-[60px] font-bold text-home_primary">Tầm
+                nhìn - sứ mệnh</h1>
+            <h2 class="text-black font-bold text-[24px] text-center lg:text-start lg:text-[60px]">Inspire Life With
+                Technology</h2>
+            <p class="text-black text-base lg:text-[24px] 2xl:leading-9">Công ty Cổ phần Luci là Công ty công nghệ tiên
+                phong nghiên
+                cứu và phát
                 triển giải
                 pháp ứng dụng cho đô
                 thị thông minh. Với lợi thế đã có kinh nghiệm triển khai các dự án trong và ngoài nước về IoT (Internet
@@ -24,7 +28,7 @@
             </p>
             <a href="" class="bg-home_primary inline-block px-[32px] py-[18px] shadow-lg rounded-lg mt-[46px]">
                 <div class="flex items-center">
-                    <span class="text-[24px] font-semibold text-white">
+                    <span class="text-base lg:text-[24px] font-semibold text-white">
                         Đọc thêm về chúng tôi
                     </span>
                     <img class="pl-2 object-cover aspect-video" src="{{asset('assets/images/icon/arrow_right.png')}}"
@@ -32,7 +36,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-span-5">
+        <div class="col-span-5 py-5 lg:py-1">
             <img src="{{asset('assets/images/banner_house.png')}}" alt="">
         </div>
     </div>

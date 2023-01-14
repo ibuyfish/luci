@@ -73,7 +73,7 @@ class BannerHook {
         $model->save();
     }
     public function delete_selected_data_translation(int $id){
-        $trans = BannerTranslation::where('theme_blog_id','=',$id)->get();
+        $trans = BannerTranslation::where('banner_id','=',$id)->get();
         foreach($trans as $tran){
             $tran->delete();
         }

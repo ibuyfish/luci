@@ -31,6 +31,7 @@ class BannerController extends Controller
         return view('banner::banner.create');
     }
     public function store(Request $request){
+   
         $datas = $this->bannerHook->validate_incoming_request($request);
         $this->bannerHook->create_data_and_translation($datas);
         return redirect(route('admin.banner.list'))->with('message','Created Success');

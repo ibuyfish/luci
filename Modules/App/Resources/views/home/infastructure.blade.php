@@ -1,5 +1,5 @@
 <section class="my-10">
-    <div class="h-[100px] rounded-[50%] relative z-10 -mb-[50px] bg-[#F6F9FB]"></div>
+    <div class="h-[50px] lg:h-[100px] rounded-[50%] relative z-10 -mb-[25px] lg:-mb-[50px] bg-[#F6F9FB]"></div>
     <div class="swiper infastructure">
         <div class="swiper-wrapper">
             @for($i = 0 ; $i < 10;$i++) <div class="swiper-slide">
@@ -12,7 +12,7 @@
     <div class="swiper-button-prev h-10 w-10 rounded-full bg-[#5f5f5fb3] text-white transition hover:bg-home__primary">
     </div>
     </div>
-    <div class="h-[100px] rounded-[50%] relative z-10 -mt-[50px] bg-[#F6F9FB]"></div>
+    <div class="h-[50px] lg:h-[100px] rounded-[50%] relative z-10 -mt-[25px] lg:-mt-[50px] bg-[#F6F9FB]"></div>
 </section>
 
 @pushonce('c-script')

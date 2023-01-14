@@ -1,4 +1,4 @@
-<section style="background-image:url({{asset('assets/images/home/footer_bg.png')}})">
+<section class="hidden lg:block" style="background-image:url({{asset('assets/images/home/footer_bg.png')}})">
     <div class="px-[133px] border-b-[1px] border-white/20 py-5">
         <div class="flex items-center">
             <div class="flex-1">

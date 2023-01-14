@@ -27,6 +27,8 @@ class SolutionHook {
             'feature_body'=>'nullable',
             'optimal_head'=>'nullable',
             'optimal_body'=>'nullable',
+            'include_head'=>'nullable',
+            'include_body'=>'nullable',
             'status'=>'nullable',
         ]);
     }
@@ -40,6 +42,11 @@ class SolutionHook {
             'name'=> $datas['optimal_head']['name'],
             'array' => $datas['optimal_body'],
         ];
+        $include_data = [
+            'name'=> $datas['include_head']['name'],
+            'subname'=> $datas['include_head']['subname'],
+            'array' => $datas['include_body'],
+        ];
         $models = new Solution();
         $models->status = $datas['status'];
         $models->save();     
@@ -49,26 +56,33 @@ class SolutionHook {
         $trans->banner = json_encode($datas['banner']);
         $trans->feature = json_encode($feature_data);
         $trans->optimal = json_encode($optimal_data);
+        $trans->include = json_encode($include_data);
         $trans->language = session('locale');
         $models->translations()->save($trans);
     }
     public function update_data_and_translation(array $datas,int $id){
-        $models = $this->solutionRepository->findById($id);
-        $models->status = $datas['status'];
-        $models->save();
-        $trans = SolutionTranslation::where('language','=',session('locale'))->where('banner_id','=',$id)->first();
-        if($trans == null){
-        $trans = new SolutionTranslation();
-        $trans->name = $datas['name'];
-        $trans->language = session('locale');
-        $trans->description = $datas['description'];
-        $models->translations()->save($trans);
-        } else {
+        $feature_data = [
+            'name'=> $datas['feature_head']['name'],
+            'subname'=> $datas['feature_head']['subname'],
+            'array' => $datas['feature_body'],
+        ];
+        $optimal_data = [
+            'name'=> $datas['optimal_head']['name'],
+            'array' => $datas['optimal_body'],
+        ];
+        $include_data = [
+            'name'=> $datas['include_head']['name'],
+            'subname'=> $datas['include_head']['subname'],
+            'array' => $datas['include_body'],
+        ];
+        $trans = SolutionTranslation::where('language','=',session('locale'))->where('solution_id','=',$id)->first();
             $trans->name = $datas['name'];
             $trans->language = session('locale');
-            $trans->description = $datas['description'];
+            $trans->banner = json_encode($datas['banner']);
+            $trans->feature = json_encode($feature_data);
+            $trans->optimal = json_encode($optimal_data);
+            $trans->include = json_encode($include_data);
             $trans->save();
-        }
     }
     public function delete_selected_data($models){
         return $models->delete();
@@ -82,7 +96,7 @@ class SolutionHook {
         $model->save();
     }
     public function delete_selected_data_translation(int $id){
-        $trans = SolutionTranslation::where('theme_blog_id','=',$id)->get();
+        $trans = SolutionTranslation::where('solution_id','=',$id)->get();
         foreach($trans as $tran){
             $tran->delete();
         }

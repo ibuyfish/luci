@@ -1,10 +1,10 @@
 <section class="py-8 ">
-    <div class="lg:px-[133px]">
+    <div class="lg:px-[133px] px-4">
         <div class="flex items-center">
-            <h1 class="uppercase font-bold text-home_primary text-[48px]">Đối tác nổi bật</h1>
+            <h1 class="uppercase font-bold text-home_primary text-[28px] lg:text-[48px]">Đối tác nổi bật</h1>
             <div class="ml-auto">
-                <img class="aspect-square cursor-pointer" src="{{asset('assets/images/icon/arrow_circle_next.png')}}"
-                    alt="">
+                <img class="aspect-square cursor-pointer w-[40px] lg:w-auto"
+                    src="{{asset('assets/images/icon/arrow_circle_next.png')}}" alt="">
             </div>
         </div>
         <div class="swiper partnerSwiper py-5">

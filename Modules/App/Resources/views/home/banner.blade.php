@@ -14,14 +14,15 @@
     <div class="swiper mySwiper bg-home_primary/70">
         <div class="swiper-wrapper">
             @foreach($banners as $banner)
-            <div class="swiper-slide grid grid-cols-9">
+            <div class="swiper-slide grid grid-cols-1 lg:grid-cols-9 px-4 lg:px-0">
                 <div class="col-span-4 lg:pl-[133px] mt-[80px]">
                     <div class="flex items-center mt-[24px]">
                         <p class="text-sm text-white">Chào mừng bạn đến với</p>
                         <img src="{{asset('assets/images/banner_arrow.png')}}" alt="">
                     </div>
-                    <h1 class="text-[80px] uppercase font-bold text-white">{{translate($banner,'name')}}</h1>
-                    <h2 class="font-semibold text-[42px] text-white">
+                    <h1 class="text-[40px] lg:text-[80px] uppercase font-bold text-white">{{translate($banner,'name')}}
+                    </h1>
+                    <h2 class="font-semibold text-[24px] lg:text-[42px] text-white">
                         {{translate($banner,'subname')}}
                     </h2>
                     <ul class="list-disc list-inside">

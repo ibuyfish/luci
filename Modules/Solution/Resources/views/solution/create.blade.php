@@ -86,6 +86,23 @@
                             <x-component::solution.solution-optimal name="optimal_item3" id="optimal3" />
                         </div>
                     </section>
+                    <section>
+                        <div class="container py-[90px]">
+                            <h1 class="text-[40px] font-bold uppercase text-black text-center">
+                                <input type="text" name="include_head[name]" placeholder="Some Text"
+                                    class="bg-home_light_blue placeholder:text-black">
+                            </h1>
+                            <p class="text-[20px] text-black text-center px-[20%] mt-6">
+                                <input type="text" name="include_head[subname]" placeholder="Some Text"
+                                    class="bg-home_light_blue placeholder:text-black">
+                            </p>
+                            <div class="grid grid-cols-2 gap-[34px] mt-[50px]">
+                                <x-component::solution.solution-include name="include_item1" id="include1" />
+                                <x-component::solution.solution-include name="include_item2" id="include2" />
+                                <x-component::solution.solution-include name="include_item3" id="include3" />
+                                <x-component::solution.solution-include name="include_item4" id="include4" />
+                            </div>
+                    </section>
                 </div>
                 <div class="mt-5 w-28">
                     <x-component::button.default type="submit" title="{{ __('dashboard.global.button_create') }}" />
