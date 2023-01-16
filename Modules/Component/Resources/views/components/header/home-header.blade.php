@@ -3,11 +3,11 @@
         <div class="py-[14px] mr-auto">
             <img src="{{asset('assets/images/home/logo.png')}}" alt="...">
         </div>
-        <div class="grid grid-cols-7 items-center gap-[45px] mr-[32px]">
+        <div class="grid grid-cols-6 items-center gap-[45px]">
             <h1 class="text-lg font-semibold text-home_text"><a href="{{route('home')}}">Trang chu</a></h1>
             <h1 class="text-lg font-semibold text-home_text"><a href="{{route('home.contact.detail')}}">Về chúng tôi</a>
             </h1>
-            <div class="group bg-red-200 h-full flex items-center justify-center relative">
+            <div class="group h-full flex items-center justify-center relative">
                 <h1 class="text-lg text-home_text">Giải pháp</h1>
                 <div class="group-hover:block hidden absolute z-10 top-[90px] bg-white shadow-lg w-[300px]">
                     @foreach($solutions as $solution)
@@ -16,7 +16,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="group bg-red-200 h-full flex items-center justify-center relative">
+            <div class="group h-full flex items-center justify-center relative">
                 <h1 class="text-lg text-home_text">Dịch vụ</h1>
                 <div class="group-hover:block hidden absolute z-10 top-[90px] bg-white shadow-lg w-[300px]">
                     <a href="{{route('home.service.detail')}}"
@@ -24,8 +24,7 @@
                 </div>
             </div>
             <h1 class="text-lg text-home_text">Trang chu</h1>
-            <h1 class="text-lg text-home_text">Trang chu</h1>
-            <h1 class="text-lg text-home_text">Trang chu</h1>
+            <h1 class="text-lg text-home_text"><a href="{{route('home.recruit.detail')}}">Tuyển dụng</a></h1>
         </div>
         <div class="bg-[#C9C9C9] w-[1px] mr-[25px]"></div>
         <div class="flex items-center mr-4">
