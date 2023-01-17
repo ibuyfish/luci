@@ -3,12 +3,21 @@
         <div class="py-[14px] mr-auto">
             <img src="{{asset('assets/images/home/logo.png')}}" alt="...">
         </div>
-        <div class="grid grid-cols-6 items-center gap-[45px]">
-            <h1 class="text-lg font-semibold text-home_text"><a href="{{route('home')}}">Trang chu</a></h1>
-            <h1 class="text-lg font-semibold text-home_text"><a href="{{route('home.about.detail')}}">Về chúng tôi</a>
+        <div class="grid grid-cols-6 items-center xl:gap-4 2xl:gap-[45px] pr-5">
+            <h1
+                class="xl:text-base 2xl:text-lg font-medium text-home_text text-center hover:text-home_primary transition">
+                <a href="{{route('home')}}">Trang chủ</a>
+            </h1>
+            <h1
+                class="xl:text-base 2xl:text-lg font-medium text-home_text text-center hover:text-home_primary transition">
+                <a href="{{route('home.about.detail')}}">Về chúng
+                    tôi</a>
             </h1>
             <div class="group h-full flex items-center justify-center relative">
-                <h1 class="text-lg text-home_text">Giải pháp</h1>
+                <h1
+                    class="text-center xl:text-base 2xl:text-lg text-home_text font-medium transition group-hover:text-home_primary">
+                    Giải
+                    pháp<i class="fa-solid fa-angle-down ml-1"></i></h1>
                 <div class="group-hover:block hidden absolute z-10 top-[90px] bg-white shadow-lg w-[300px]">
                     @foreach($solutions as $solution)
                     <a href="{{route('home.solution.detail',$solution->id)}}"
@@ -17,14 +26,30 @@
                 </div>
             </div>
             <div class="group h-full flex items-center justify-center relative">
-                <h1 class="text-lg text-home_text">Dịch vụ</h1>
+                <h1
+                    class="text-center xl:text-base 2xl:text-lg font-medium text-home_text transition group-hover:text-home_primary">
+                    Dịch
+                    vụ<i class="fa-solid fa-angle-down ml-1"></i></h1>
                 <div class="group-hover:block hidden absolute z-10 top-[90px] bg-white shadow-lg w-[300px]">
                     <a href="{{route('home.service.detail')}}"
                         class="block p-3 bg-white hover:bg-home_primary hover:text-white transition">Dich vu</a>
                 </div>
             </div>
-            <h1 class="text-lg text-home_text">Trang chu</h1>
-            <h1 class="text-lg text-home_text"><a href="{{route('home.recruit.detail')}}">Tuyển dụng</a></h1>
+            <div class="group h-full flex items-center justify-center relative">
+                <h1
+                    class="text-center xl:text-base 2xl:text-lg font-medium text-home_text transition group-hover:text-home_primary">
+                    Blog<i class="fa-solid fa-angle-down ml-1"></i></h1>
+                <div class="group-hover:block hidden absolute z-10 top-[90px] bg-white shadow-lg w-[300px]">
+                    @foreach($blog_categories as $blog_category)
+                    <a href="{{route('home.blog_category.list',[$blog_category->id,Str::slug(translate($blog_category,'name'))])}}"
+                        class="block p-3 bg-white hover:bg-home_primary hover:text-white transition">{{translate($blog_category,'name')}}</a>
+                    @endforeach
+                </div>
+            </div>
+            <h1
+                class="xl:text-base 2xl:text-lg text-home_text text-center hover:text-home_primary transition font-medium">
+                <a href="{{route('home.recruit.detail')}}">Tuyển dụng</a>
+            </h1>
         </div>
         <div class="bg-[#C9C9C9] w-[1px] mr-[25px]"></div>
         <div class="flex items-center mr-4">
@@ -37,7 +62,8 @@
             </select>
         </div>
         <div class="flex items-center">
-            <a href="{{route('home.contact.detail')}}" class="flex px-[18px] py-[11px] bg-home_primary rounded-md">
+            <a href="{{route('home.contact.detail')}}"
+                class="flex xl:px-4 2xl:px-[18px] py-[11px] bg-home_primary rounded-md">
                 <span class="text-base text-white font-semibold">Liên hệ</span>
                 <img class="ml-[15px]" src="{{asset('assets/images/home/chat.png')}}" alt="">
             </a>

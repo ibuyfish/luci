@@ -19,14 +19,26 @@
         @endforeach
         @endif
     </ul>
-    <div class="add_li{{$name}} relative z-10 text-center cursor-pointer">Add</div>
+    <div class="flex gap-4 action_box">
+        <div
+            class="remove_li{{$name}} w-1/2 py-1 border-[1px] border-[#ebebeb] rounded-lg relative z-10 text-center cursor-pointer">
+            Remove
+        </div>
+        <div
+            class="add_li{{$name}} w-1/2 py-1 border-[1px] border-[#ebebeb] rounded-lg relative z-10 text-center cursor-pointer">
+            Add
+        </div>
+    </div>
 </div>
 
 @push('c-script')
 <script>
     $('.add_li{{$name}}').on('click', function () {
-        $(this).prev().append(`<li><input type="text" name="feature_body[{{$name}}][list][]" placeholder="Some Text"
+        $(this).closest('.action_box').prev().append(`<li><input type="text" name="feature_body[{{$name}}][list][]" placeholder="Some Text"
                                                 class="w-full bg-home_primary placeholder:text-white"></li>`);
+    })
+    $('.remove_li{{$name}}').on('click', function () {
+        $(this).closest('.action_box').prev().empty();
     })
 </script>
 @endpush

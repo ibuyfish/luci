@@ -6,17 +6,17 @@
                 <h1 class="font-bold text-[18px] text-white mt-2">Về LUCI</h1>
             </x-slot>
         </x-component::breadcrumb.home-default>
-        <div class="container grid grid-cols-9 gap-[90px]">
-            <div class="col-span-4 -mt-[40px]">
+        <div class="container grid grid-cols-1 lg:grid-cols-9 lg:gap-[90px] px-[15px] lg:px-0 py-5 lg:py-0">
+            <div class="col-span-4 lg:-mt-[40px]">
                 <img class="aspect-square" src="{{asset('assets/images/about/banner.png')}}" alt="">
             </div>
             <div class="col-span-5">
-                <h1 class="leading-[120%] font-bold text-[100px] text-white uppercase">Giải pháp <br>
+                <h1 class="lg:leading-[120%] font-bold text-[40px] lg:text-[100px] text-white uppercase">Giải pháp <br>
                     đô thị <br>
                     thông minh</h1>
                 <a href="" class="bg-white inline-block px-[32px] py-[18px] shadow-lg rounded-lg mt-[46px]">
                     <div class="flex items-center">
-                        <span class="text-[24px] font-semibold text-home_primary">
+                        <span class="text-base lg:text-[24px] font-semibold text-home_primary">
                             Đọc thêm về chúng tôi
                         </span>
                         <img class="pl-2 object-cover aspect-video"

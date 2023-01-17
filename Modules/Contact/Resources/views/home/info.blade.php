@@ -1,16 +1,16 @@
-<section>
-    <div class="container grid grid-cols-9 pb-[70px] gap-[60px]">
+<section class="px-[15px] lg:px-0">
+    <div class="container grid grid-cols-1 lg:grid-cols-9 pb-[70px] lg:gap-[60px]">
         <div class="col-span-4 mt-[55px]">
             <div class="flex gap-5">
                 <a href="" class=block>
-                    <img class="w-[85px]" src="{{asset('assets/images/icon/call.png')}}" alt="">
+                    <img class="lg:w-[85px]" src="{{asset('assets/images/icon/call.png')}}" alt="">
                     <div class="w-2/3">
                         <p class="text-sm text-black">Bạn có thể nói chuyện với cố vấn của chúng tôi bằng cách gọi số
                             điện thoại
                             cho quốc gia hoặc
                             khu vực của bạn.</p>
                         <a href=""
-                            class="bg-home_primary uppercase mt-3 text-[20px] block text-center rounded-xl py-2 text-white font-medium">0888
+                            class="bg-home_primary uppercase mt-3 text-base lg:text-[20px] block text-center rounded-xl py-2 text-white font-medium">0888
                             729
                             119</a>
                     </div>
@@ -18,45 +18,49 @@
             </div>
             <div class="flex gap-5 mt-[66px]">
                 <a href="" class=block>
-                    <img class="w-[85px]" src="{{asset('assets/images/icon/chat.png')}}" alt="">
+                    <img class="lg:w-[85px]" src="{{asset('assets/images/icon/chat.png')}}" alt="">
                     <div class="w-2/3">
                         <p class="text-sm text-black">Bạn có thể nói chuyện với cố vấn của chúng tôi bằng cách gọi số
                             điện thoại
                             cho quốc gia hoặc
                             khu vực của bạn.</p>
                         <a href=""
-                            class="bg-[#F79428] uppercase mt-3 text-[20px] block text-center rounded-xl py-2 text-white font-medium">
+                            class="bg-[#F79428] uppercase mt-3 text-base lg:text-[20px] block text-center rounded-xl py-2 text-white font-medium">
                             Tham gia fanpage</a>
                     </div>
                 </a>
             </div>
             <h1 class="text-[24px] text-black font-semibold mt-[66px]">Trụ sở làm việc</h1>
-            <div class="bg-[#009B71]/10 py-6 px-[50px] rounded-xl border-home_primary border-[1px] mt-[30px]">
-                <h1 class="text-[24px] text-[#009B71]">
+            <div class="bg-[#009B71]/10 py-6 px-4 lg:px-[50px] rounded-xl border-home_primary border-[1px] mt-[30px]">
+                <h1 class="text-base lg:text-[24px] leading-8 text-[#009B71]">
                     <strong>Trụ sở Hà Nội:</strong>
                     Tầng 2, toà New Skyline, Đường Nguyễn Khuyễn, Phường Văn Quán, Quận Hà Đông, Tp. Hà
                     Nội
                 </h1>
             </div>
-            <div class="bg-white py-6 px-[50px] rounded-xl border-black border-[1px] mt-[30px]">
-                <h1 class="text-[24px] text-[#009B71]">
+            <div class="bg-white py-6 px-4 lg:px-[50px] rounded-xl border-black border-[1px] mt-[30px]">
+                <h1 class="text-base lg:text-[24px] leading-8 text-[#009B71]">
                     <strong>Trụ sở Hà Nội:</strong>
                     Tầng 2, toà New Skyline, Đường Nguyễn Khuyễn, Phường Văn Quán, Quận Hà Đông, Tp. Hà
                     Nội
                 </h1>
             </div>
         </div>
-        <div class="col-span-5 shadow-2xl rounded-xl overflow-hidden -mt-[150px] z-10 relative">
-            <div class="flex items-center gap-5 py-[31px] px-[64px] bg-[#E9FFF9]">
-                <img src="{{asset('assets/images/contact/mail.png')}}" alt="">
-                <p class="text-[24px] text-black">Vui lòng để lại thông tin và lời bạn muốn nhắn nhủ, chúng tôi sẽ liên
+        <div class="col-span-5 shadow-2xl rounded-xl overflow-hidden lg:-mt-[150px] z-10 relative">
+            <div class="flex items-center gap-5 px-4 py-5 lg:py-[31px] lg:px-[64px] bg-[#E9FFF9]">
+                <div>
+                    <img src="{{asset('assets/images/contact/mail.png')}}" alt="">
+                </div>
+                <p class="text-sm lg:text-[24px] leading-8 text-black">Vui lòng để lại thông tin và lời bạn muốn nhắn
+                    nhủ, chúng
+                    tôi sẽ liên
                     hệ lại
                     trong 24h!</p>
             </div>
-            <div class="bg-white px-[64px] pt-[30px] h-full">
+            <div class="bg-white px-4 lg:px-[64px] pt-[30px] h-full">
                 <form action="" method="POST">
                     @csrf
-                    <div class="grid grid-cols-2 gap-x-3 gap-y-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-6">
                         <div>
                             <h1 class="text-base text-black font-medium">Họ<span class="text-red-600">*</span></h1>
                             <input type="text" placeholder="Nhập thông tin tại đây" name="last_name"

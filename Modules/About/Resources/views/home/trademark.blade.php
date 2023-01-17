@@ -1,9 +1,9 @@
 <section class="py-[44px]">
-    <div class="container">
-        <h1 class="text-[50px] uppercase text-black font-semibold -ml-[20px]">
+    <div class="container px-[15px] lg:px-0">
+        <h1 class="text-[32px] lg:text-[50px] uppercase text-black font-semibold lg:-ml-[20px]">
             Thương hiệu uy tín
         </h1>
-        <div class="grid grid-cols-3 gap-[28px] py-[76px]">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-[28px] py-[76px]">
             <div class="bg-white overflow-hidden rounded-2xl">
                 <a href="#">
                     <img class="object-cover w-full aspect-video" src="{{asset('assets/images/about/trademark1.png')}}"

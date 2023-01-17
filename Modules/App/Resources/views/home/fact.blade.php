@@ -46,9 +46,10 @@
             <div class="dropDownContainer">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-1 py-8">
                     <div class="order-last lg:order-first">
-                        <h1 class="text-base mt-3 lg:mt-0 lg:text-[24px] font-bold text-black">Hệ sinh thái Luci Cloud
+                        <h1 class="text-base mt-3 lg:mt-0 lg:text-[24px] font-bold text-black">Hệ sinh thái
+                            Luci Cloud
                         </h1>
-                        <p class="text-sm mt-2 lg:text-[20px] font-medium text-[#2E2E2E] 2xl:leading-8">
+                        <p class="text-sm mt-2 lg:text-[20px] font-medium text-[#2E2E2E] xl:leading-8 2xl:leading-8">
                             Luci đã tiếp cận hơn 50.000 cư dân thông minh và ghi danh tại hơn 5 đại lộthị trải dọc
                             Việt
                             Nam.Luci
@@ -90,7 +91,7 @@
                     <div class="order-last lg:order-first">
                         <h1 class="text-base mt-3 lg:mt-0 lg:text-[24px] font-bold text-black">Hệ sinh thái Luci Cloud
                         </h1>
-                        <p class="text-sm mt-2 lg:text-[20px] font-medium text-[#2E2E2E] 2xl:leading-8">
+                        <p class="text-sm mt-2 lg:text-[20px] font-medium text-[#2E2E2E] xl:leading-8 2xl:leading-8">
                             Luci đã tiếp cận hơn 50.000 cư dân thông minh và ghi danh tại hơn 5 đại lộthị trải dọc
                             Việt
                             Nam.Luci

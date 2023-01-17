@@ -14,7 +14,7 @@
                 </div>
             </div>
         </section>
-        <div class="2xl:ml-[180px] grid grid-cols-1 lg:grid-cols-11 lg:gap-5 py-[55px] px-[15px] lg:px-0 mt-5 lg:mt-0">
+        <div class="container grid grid-cols-1 lg:grid-cols-11 lg:gap-5 py-[55px] px-[15px] lg:px-0 mt-5 lg:mt-0">
             <div class="col-span-5 order-2 lg:order-1">
                 <h1 class="font-bold text-[60px] text-home_primary uppercase">Cơ hội việc làm</h1>
                 <p class="text-[24px] text-[#4A4A4A] mt-[19px]">
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="col-span-3 order-3 lg:order-3 mt-5 lg:mt-0">
-                <img class="aspect-square mx-auto" src="{{asset('assets/images/recruit/banner1.png')}}" alt="">
+                <img class="object-cover mx-auto" src="{{asset('assets/images/recruit/banner1.png')}}" alt="">
             </div>
         </div>
     </div>

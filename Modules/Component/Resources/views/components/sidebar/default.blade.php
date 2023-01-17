@@ -1,4 +1,4 @@
-<div class="h-screen w-[260px] hidden lg:block lg:fixed bg-secondary shadow-lg">
+<div class="h-screen w-[260px] hidden lg:block lg:fixed bg-secondary shadow-lg overflow-auto admin-sidebar">
     <div class="p-4">
         <img class="mx-auto w-[80px] py-5"
             src="https://pixinvent.com/demo/vuexy-vuejs-laravel-admin-template/demo-1/images/logo/logo.svg" alt="" />
@@ -40,26 +40,16 @@
             <x-component::button.sidebar-href href="{{ route('admin.policy.create') }}" title="Create"
                 url="policy/create" />
         </x-component::collapse.sidebar-text>
-        <h1 class="px-[10px] pt-8 pb-2 text-sm font-semibold uppercase text-g_divider">
-            Theme
-        </h1>
-        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="theme_category" title="Category">
-            <x-component::button.sidebar-href href="{{ route('admin.theme_category.list') }}" title="List"
-                url="theme_category/list" />
-            <x-component::button.sidebar-href href="{{ route('admin.theme_category.create') }}" title="Create"
-                url="theme_category/create" />
+        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="blog_category" title="Blog Category">
+            <x-component::button.sidebar-href href="{{ route('admin.blog_category.list') }}" title="List"
+                url="blog_category/list" />
+            <x-component::button.sidebar-href href="{{ route('admin.blog_category.create') }}" title="Create"
+                url="blog_category/create" />
         </x-component::collapse.sidebar-text>
-        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="theme_product" title="Product">
-            <x-component::button.sidebar-href href="{{ route('admin.theme_product.list') }}" title="List"
-                url="theme_product/list" />
-            <x-component::button.sidebar-href href="{{ route('admin.theme_product.create') }}" title="Create"
-                url="theme_product/create" />
-        </x-component::collapse.sidebar-text>
-        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="theme_blog" title="Blog">
-            <x-component::button.sidebar-href href="{{ route('admin.theme_blog.list') }}" title="List"
-                url="theme_blog/list" />
-            <x-component::button.sidebar-href href="{{ route('admin.theme_blog.create') }}" title="Create"
-                url="theme_blog/create" />
+        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="blog" title="Blog">
+            <x-component::button.sidebar-href href="{{ route('admin.blog.list') }}" title="List" url="blog/list" />
+            <x-component::button.sidebar-href href="{{ route('admin.blog.create') }}" title="Create"
+                url="blog/create" />
         </x-component::collapse.sidebar-text>
     </div>
 </div>
@@ -80,21 +70,6 @@
                         <p class="ml-4 text-base font-medium">Dashboard</p>
                     </a>
                 </div>
-                <h1 class="px-[10px] pt-8 pb-2 text-sm font-semibold uppercase text-g_divider">
-                    Theme
-                </h1>
-                <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="theme_category" title="Category">
-                    <x-component::button.sidebar-href href="{{ route('admin.theme_category.list') }}" title="List"
-                        url="theme_category/list" />
-                    <x-component::button.sidebar-href href="{{ route('admin.theme_category.create') }}" title="Create"
-                        url="theme_category/create" />
-                </x-component::collapse.sidebar-text>
-                <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="theme_product" title="Category">
-                    <x-component::button.sidebar-href href="{{ route('admin.theme_product.list') }}" title="List"
-                        url="theme_product/list" />
-                    <x-component::button.sidebar-href href="{{ route('admin.theme_product.create') }}" title="Create"
-                        url="theme_product/create" />
-                </x-component::collapse.sidebar-text>
             </div>
         </div>
         <div id="closeToggle" class="flex-1 "></div>

@@ -10,14 +10,15 @@
 @section('content')
 
 @include('app::home.banner')
-<section class="py-8" style="background-image:url({{asset('assets/images/bg-decor1.png')}})">
+<section class="py-8 elem fade-in-section" style="background-image:url({{asset('assets/images/bg-decor1.png')}})">
     <div class="grid grid-cols-1 lg:grid-cols-9 items-center px-4 lg:px-0">
         <div class="lg:pl-[133px] col-span-4">
             <h1 class="uppercase text-[32px] text-center lg:text-start lg:text-[60px] font-bold text-home_primary">Tầm
                 nhìn - sứ mệnh</h1>
             <h2 class="text-black font-bold text-[24px] text-center lg:text-start lg:text-[60px]">Inspire Life With
                 Technology</h2>
-            <p class="text-black text-base lg:text-[24px] 2xl:leading-9">Công ty Cổ phần Luci là Công ty công nghệ tiên
+            <p class="text-black text-base lg:text-[24px] leading-8 2xl:leading-9">Công ty Cổ phần Luci là Công ty
+                công nghệ tiên
                 phong nghiên
                 cứu và phát
                 triển giải

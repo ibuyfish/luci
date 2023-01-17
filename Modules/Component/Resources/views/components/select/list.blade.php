@@ -4,8 +4,8 @@
     @if($value == null)
     <option value="" selected>{{$placeholder}}</option>
     @else
-    <option value="{{$value->id}}" selected>{{Helper::trans($value,'name')}}</option>
+    <option value="{{$value->id}}" selected>{{translate($value,'name')}}</option>
     @endif @foreach($datas as $data)
-    <option value="{{$data->id}}">{{Helper::trans($data,'name')}}</option>
+    <option value="{{$data->id}}">{{translate($data,'name')}}</option>
     @endforeach
 </select>

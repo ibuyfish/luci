@@ -1,4 +1,4 @@
-<section>
+<section class="hidden">
     <div class="container flex items-center justify-center gap-[100px] py-[50px]">
         <a href="">
             <img src="{{asset('assets/images/news.png')}}" alt="">

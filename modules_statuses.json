@@ -3,12 +3,12 @@
     "Auth": true,
     "Layout": true,
     "Component": true,
-    "Theme": true,
     "Contact": true,
     "Solution": true,
     "Banner": true,
     "Service": true,
     "Recruit": true,
     "Policy": true,
-    "About": true
+    "About": true,
+    "Blog": true
 }

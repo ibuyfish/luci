@@ -1,6 +1,6 @@
-<section class="hidden lg:block" style="background-image:url({{asset('assets/images/home/footer_bg.png')}})">
-    <div class="px-[133px] border-b-[1px] border-white/20 py-5">
-        <div class="flex items-center">
+<section class="px-[15px] lg:px-0" style="background-image:url({{asset('assets/images/home/footer_bg.png')}})">
+    <div class="container border-b-[1px] border-white/20 py-5">
+        <div class="block lg:flex items-center">
             <div class="flex-1">
                 <a href="">
                     <img class="aspect-video" src="{{asset('assets/images/home/footer_logo.png')}}" alt="">
@@ -31,7 +31,7 @@
                     <p class="text-lg text-white">839645234</p>
                 </div>
             </div>
-            <div class="flex-1 pr-[40px]">
+            <div class="flex-1 lg:pr-[40px]">
                 <h1 class="text-lg font-bold text-white">Trụ sở Hà Nội</h1>
                 <p class="text-lg text-white">Tầng 2, toà New Skyline, Đường Nguyễn Khuyễn, Phường Văn Quán, Quận Hà
                     Đông, Tp. Hà Nội</p>
@@ -47,8 +47,8 @@
             </div>
         </div>
     </div>
-    <div class="px-[133px] border-b-[1px] border-white/20 py-5">
-        <div class="flex items-center">
+    <div class="container border-b-[1px] border-white/20 py-5">
+        <div class="block lg:flex items-center">
             <div class="flex-1">
                 <h1 class="text-lg font-bold text-white">Hotline</h1>
                 <div class="mt-3">
@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-    <div class="px-[133px]">
+    <div class="container">
         <p class="py-1 text-lg text-[12px] text-white text-center"><a href="">© 2022 LUCI. All Right Reserved.</a></p>
     </div>
 </section>

@@ -1,14 +1,14 @@
 @php
 $features = json_decode($model->translations[0]->feature);
 @endphp
-<section class="py-[112px]">
+<section class="py-[112px] px-[15px] lg:px-0">
     <div class="container">
-        <h1 class="text-[40px] font-bold uppercase text-black text-center">{{$features->name}}
+        <h1 class="text-[32px] lg:text-[40px] font-bold uppercase text-black text-center">{{$features->name}}
         </h1>
-        <p class="text-[20px] text-black text-center px-[20%] mt-6">
+        <p class="text-[18px] lg:text-[20px] text-black text-center px-[20%] mt-6">
             {{$features->subname}}
         </p>
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-[32px] mt-[69px]">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-[32px] mt-[69px]">
             @foreach($features->array as $feature)
             <div class="px-[14px] py-[19px] bg-home_primary overflow-hidden rounded-xl relative">
                 <img class="absolute bottom-2 right-2 w-[150px] h-[188px] opacity-10"

@@ -8,7 +8,8 @@
             <div class="col-span-6">
                 <h1 class="text-black font-bold text-[32px] lg:text-[48px] uppercase">Tham gia cùng <br>
                     đội ngũ giỏi nhất</h1>
-                <p class="text-[#2E2E2E] text-sm lg:text-[20px] mt-5 font-medium lg:w-2/3 2xl:leading-8">Cùng nhau,
+                <p class="text-[#2E2E2E] text-sm lg:text-[20px] mt-5 font-medium lg:w-2/3 xl:leading-8 2xl:leading-8">
+                    Cùng nhau,
                     chúng ta là lực
                     lượng sẽ biến
                     đổi một

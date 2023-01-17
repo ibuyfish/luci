@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use App\View\SolutionComposer;
 use Illuminate\Support\Facades\View;
 use App\View\PolicyComposer;
+use App\View\BlogCategoryComposer;
 
 class ComposerProvider extends ServiceProvider
 {
@@ -28,5 +29,6 @@ class ComposerProvider extends ServiceProvider
     {
         View::composer(['component::*'],SolutionComposer::class);
         View::composer(['component::*'],PolicyComposer::class);
+        View::composer(['component::*'],BlogCategoryComposer::class);
     }
 }
