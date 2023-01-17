@@ -92,8 +92,10 @@
             <div class="flex-1">
                 <h1 class="text-lg font-bold text-white">Chính sách</h1>
                 <div class="mt-3">
-                    <p class="py-1 text-lg text-white"><a href="">Chính sách bảo mật thông tin</a></p>
-                    <p class="py-1 text-lg text-white"><a href="">Hình thức thanh toán</a></p>
+                    @foreach($policies as $policy)
+                    <p class="py-1 text-lg text-white"><a
+                            href="{{route('home.policy.detail',$policy->id)}}">{{translate($policy,'name')}}</a></p>
+                    @endforeach
                 </div>
             </div>
         </div>

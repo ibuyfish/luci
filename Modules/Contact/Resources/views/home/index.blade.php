@@ -10,10 +10,8 @@
 @section('content')
 
 @include('contact::home.banner')
-@include('contact::home.value')
-@include('contact::home.year')
-@include('contact::home.trademark')
-@include('contact::home.job')
+@include('contact::home.info')
+@include('contact::home.map')
 
 @endsection
 

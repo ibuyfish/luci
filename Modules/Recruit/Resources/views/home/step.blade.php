@@ -1,10 +1,10 @@
 <section class="bg-[#F6F9FB] relative">
     <div class="container py-[80px]">
         <div
-            class="border-dotted border-b-[3px] border-home_primary w-[70%] top-[62%] absolute z-10 left-[15%] right-[15%]">
+            class="border-dotted border-b-[3px] hidden lg:block border-home_primary w-[70%] top-[62%] absolute z-10 left-[15%] right-[15%]">
         </div>
         <h1 class="text-black uppercase text-center text-[50px] font-semibold">Quy trình tuyển dụng</h1>
-        <div class="grid grid-cols-6 gap-[70px] mt-[80px]">
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-[70px] mt-[80px]">
             <div class="text-center">
                 <img class="mx-auto h-[137px] w-auto object-cover" src="{{asset('assets/images/recruit/step1.png')}}"
                     alt="">

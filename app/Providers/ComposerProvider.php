@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\View\SolutionComposer;
 use Illuminate\Support\Facades\View;
+use App\View\PolicyComposer;
 
 class ComposerProvider extends ServiceProvider
 {
@@ -26,5 +27,6 @@ class ComposerProvider extends ServiceProvider
     public function boot()
     {
         View::composer(['component::*'],SolutionComposer::class);
+        View::composer(['component::*'],PolicyComposer::class);
     }
 }

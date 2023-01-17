@@ -14,8 +14,8 @@
                 </div>
             </div>
         </section>
-        <div class="2xl:ml-[180px] grid grid-cols-11 gap-5 py-[55px]">
-            <div class="col-span-5">
+        <div class="2xl:ml-[180px] grid grid-cols-1 lg:grid-cols-11 lg:gap-5 py-[55px] px-[15px] lg:px-0 mt-5 lg:mt-0">
+            <div class="col-span-5 order-2 lg:order-1">
                 <h1 class="font-bold text-[60px] text-home_primary uppercase">Cơ hội việc làm</h1>
                 <p class="text-[24px] text-[#4A4A4A] mt-[19px]">
                     Ứng viên quan tâm tới các công việc tại Luci có thể gửi mẫu nhận thông báo ưu tiên hoặc sơ yếu lý
@@ -34,46 +34,53 @@
                     </div>
                 </a>
             </div>
-            <div class="col-span-3 bg-white rounded-3xl overflow-hidden">
+            <div class="col-span-3 bg-white rounded-3xl overflow-hidden mt-5 lg:mt-0 order-1 lg:order-2">
                 <h1 class="text-[24px] text-white uppercase font-semibold text-center py-[22px] bg-home_primary">Nhận
                     thông báo tuyển
                     dụng</h1>
                 <div class="px-[27px] pb-4">
-                    <div class="mt-4">
-                        <h1 class="text-base text-black font-medium">Họ tên</h1>
-                        <input
-                            class="w-full rounded-lg focus-visible:outline-none border-[1px] mt-1 border-[#E0E0E0] p-[13px]"
-                            type="text" placeholder="Nhập thông tin tại đây">
-                    </div>
-                    <div class="mt-4">
-                        <h1 class="text-base text-black font-medium">Email</h1>
-                        <input
-                            class="w-full rounded-lg focus-visible:outline-none border-[1px] mt-1 border-[#E0E0E0] p-[13px]"
-                            type="text" placeholder="Nhập thông tin tại đây">
-                    </div>
-                    <div class="mt-4">
-                        <h1 class="text-base text-black font-medium">Số điện thoại</h1>
-                        <input
-                            class="w-full rounded-lg focus-visible:outline-none border-[1px] mt-1 border-[#E0E0E0] p-[13px]"
-                            type="text" placeholder="Nhập thông tin tại đây">
-                    </div>
-                    <div class="mt-4">
-                        <h1 class="text-base text-black font-medium">Vị trí ứng tuyển</h1>
-                        <input
-                            class="w-full rounded-lg focus-visible:outline-none border-[1px] mt-1 border-[#E0E0E0] p-[13px]"
-                            type="text" placeholder="Nhập thông tin tại đây">
-                    </div>
-                    <p class="text-[13px] text-black mt-4">
-                        Luci cam kết bảo mật mọi thông tin của ứng viên. Đồng thời, ứng viên cần chịu trách nhiệm về độ
-                        tin cậy thông tin cung cấp cho nhà tuyển dụng.
-                    </p>
-                    <button
-                        class="text-center w-full bg-home_primary text-base text-white font-medium py-[14px] rounded-xl mt-4">Gửi
-                        đi</button>
+                    <form action="{{route('home.recruit.storeApplicant')}}" method="POST">
+                        @csrf
+                        @if(session()->has('message'))
+                        <h1 class="text-sm text-home_primary mt-3">{{session()->get('message')}}</h1>
+                        @endif
+                        <div class="mt-4">
+                            <h1 class="text-base text-black font-medium">Họ tên</h1>
+                            <input
+                                class="w-full rounded-lg focus-visible:outline-none border-[1px] mt-1 border-[#E0E0E0] p-[13px]"
+                                type="text" placeholder="Nhập thông tin tại đây" name="name">
+                        </div>
+                        <div class="mt-4">
+                            <h1 class="text-base text-black font-medium">Email</h1>
+                            <input
+                                class="w-full rounded-lg focus-visible:outline-none border-[1px] mt-1 border-[#E0E0E0] p-[13px]"
+                                type="text" name="email" placeholder="Nhập thông tin tại đây">
+                        </div>
+                        <div class="mt-4">
+                            <h1 class="text-base text-black font-medium">Số điện thoại</h1>
+                            <input
+                                class="w-full rounded-lg focus-visible:outline-none border-[1px] mt-1 border-[#E0E0E0] p-[13px]"
+                                type="text" placeholder="Nhập thông tin tại đây" name="phone">
+                        </div>
+                        <div class="mt-4">
+                            <h1 class="text-base text-black font-medium">Vị trí ứng tuyển</h1>
+                            <input
+                                class="w-full rounded-lg focus-visible:outline-none border-[1px] mt-1 border-[#E0E0E0] p-[13px]"
+                                type="text" placeholder="Nhập thông tin tại đây" name="position">
+                        </div>
+                        <p class="text-[13px] text-black mt-4">
+                            Luci cam kết bảo mật mọi thông tin của ứng viên. Đồng thời, ứng viên cần chịu trách nhiệm về
+                            độ
+                            tin cậy thông tin cung cấp cho nhà tuyển dụng.
+                        </p>
+                        <button
+                            class="text-center w-full bg-home_primary text-base text-white font-medium py-[14px] rounded-xl mt-4">Gửi
+                            đi</button>
+                    </form>
                 </div>
             </div>
-            <div class="col-span-3">
-                <img class="aspect-square" src="{{asset('assets/images/recruit/banner1.png')}}" alt="">
+            <div class="col-span-3 order-3 lg:order-3 mt-5 lg:mt-0">
+                <img class="aspect-square mx-auto" src="{{asset('assets/images/recruit/banner1.png')}}" alt="">
             </div>
         </div>
     </div>

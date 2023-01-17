@@ -8,5 +8,7 @@
     "Solution": true,
     "Banner": true,
     "Service": true,
-    "Recruit": true
+    "Recruit": true,
+    "Policy": true,
+    "About": true
 }

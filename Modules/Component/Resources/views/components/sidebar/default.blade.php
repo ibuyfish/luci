@@ -23,6 +23,23 @@
             <x-component::button.sidebar-href href="{{ route('admin.solution.create') }}" title="Create"
                 url="solution/create" />
         </x-component::collapse.sidebar-text>
+        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="recruit" title="Recruit">
+            <x-component::button.sidebar-href href="{{ route('admin.recruit.list') }}" title="List"
+                url="recruit/list" />
+            <x-component::button.sidebar-href href="{{ route('admin.recruit.create') }}" title="Create"
+                url="recruit/create" />
+        </x-component::collapse.sidebar-text>
+        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="recruit_applicant" title="Recruit Applicant">
+            <x-component::button.sidebar-href href="{{ route('admin.recruit_applicant.list') }}" title="List"
+                url="recruit_applicant/list" />
+            <x-component::button.sidebar-href href="{{ route('admin.recruit_applicant.create') }}" title="Create"
+                url="recruit_applicant/create" />
+        </x-component::collapse.sidebar-text>
+        <x-component::collapse.sidebar-text icon="fa-solid fa-house" url="policy" title="Policy">
+            <x-component::button.sidebar-href href="{{ route('admin.policy.list') }}" title="List" url="policy/list" />
+            <x-component::button.sidebar-href href="{{ route('admin.policy.create') }}" title="Create"
+                url="policy/create" />
+        </x-component::collapse.sidebar-text>
         <h1 class="px-[10px] pt-8 pb-2 text-sm font-semibold uppercase text-g_divider">
             Theme
         </h1>
