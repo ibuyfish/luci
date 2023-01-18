@@ -1,7 +1,9 @@
 <section class="lg:block hidden">
     <div class="container flex flex-row items-stretch">
         <div class="py-[14px] mr-auto">
-            <img src="{{asset('assets/images/home/logo.png')}}" alt="...">
+            <a href="{{route('home')}}">
+                <img src="{{asset('assets/images/home/logo.png')}}" alt="...">
+            </a>
         </div>
         <div class="grid grid-cols-6 items-center xl:gap-4 2xl:gap-[45px] pr-5">
             <h1
